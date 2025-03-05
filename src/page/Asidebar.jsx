@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Asidebar = () => {
   return (
@@ -10,22 +11,22 @@ const Asidebar = () => {
           className="brand-image img-circle elevation-3"
           style={{ opacity: 0.8 }}
         />
-        <span className="brand-text font-weight-light">AdminLTE 3</span>
+        <span className="brand-text font-weight-light">YashLTE </span>
       </a>
 
       <div className="sidebar">
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
           <div className="image">
             <img
-              src="../dist/img/user2-160x160.jpg"
+              src="../dist/img/yash.png"
               className="img-circle elevation-2"
               alt="User Image"
             />
           </div>
           <div className="info">
-            <a href="#" className="d-block">
-              Alexander Pierce
-            </a>
+            <Link to={'/dashboard'} className="d-block">
+              Yash Admin
+            </Link>
           </div>
         </div>
 
@@ -62,17 +63,23 @@ const Asidebar = () => {
               </a>
               <ul className="nav nav-treeview">
                 <li className="nav-item">
-                  <a href="#" className="nav-link active">
+                  <Link to={'/country'} className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Active Page</p>
-                  </a>
+                    <p>Country List</p>
+                  </Link>
                 </li>
-                {/* <li className="nav-item">
-                  <a href="#" className="nav-link">
+                <li className="nav-item">
+                  <Link to={'/state'} className="nav-link">
                     <i className="far fa-circle nav-icon" />
-                    <p>Inactive Page</p>
-                  </a>
-                </li> */}
+                    <p>State List</p>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={'/city'} className="nav-link">
+                    <i className="far fa-circle nav-icon" />
+                    <p>City List</p>
+                  </Link>
+                </li>
               </ul>
             </li>
             
